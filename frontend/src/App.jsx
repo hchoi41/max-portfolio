@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef, createContext, useContext } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Menu, X } from 'lucide-react';
 
 // ===== i18n TRANSLATIONS =====
 const translations = {
@@ -801,8 +801,9 @@ const SectionHeading = ({ children, className = "" }) => (
 );
 
 const Navigation = ({ activeTab, setActiveTab, language, setLanguage }) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[language];
-  
+
   const tabs = [
     { id: 'overview', labelKey: 'overview' },
     { id: 'narrative', labelKey: 'narrative' },
@@ -812,17 +813,25 @@ const Navigation = ({ activeTab, setActiveTab, language, setLanguage }) => {
     { id: 'inputs', labelKey: 'jdAnalysis' },
     { id: 'contact', labelKey: 'contact' }
   ];
-  
+
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+    setMobileMenuOpen(false);
+  };
+
   return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-600 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 md:h-16">
+          {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🚀</span>
-            <span className="font-bold text-white text-lg">Max Choi Portfolio</span>
+            <span className="text-xl md:text-2xl">🚀</span>
+            <span className="font-bold text-white text-base md:text-lg">Max Choi Portfolio</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="flex gap-1 flex-wrap">
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-2">
+            <div className="flex gap-1">
               {tabs.map(tab => (
                 <button
                   key={tab.id}
@@ -837,7 +846,7 @@ const Navigation = ({ activeTab, setActiveTab, language, setLanguage }) => {
                 </button>
               ))}
             </div>
-            {/* Language Toggle */}
+            {/* Language Toggle - Desktop */}
             <div className="flex items-center ml-4 border-l border-slate-600 pl-4">
               <button
                 onClick={() => setLanguage(language === 'ko' ? 'en' : 'ko')}
@@ -849,7 +858,51 @@ const Navigation = ({ activeTab, setActiveTab, language, setLanguage }) => {
               </button>
             </div>
           </div>
+
+          {/* Mobile: Language Toggle + Hamburger */}
+          <div className="flex lg:hidden items-center gap-2">
+            <button
+              onClick={() => setLanguage(language === 'ko' ? 'en' : 'ko')}
+              className="flex items-center gap-1 px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded-lg text-xs font-medium transition-all border border-slate-500"
+            >
+              <span className="text-white font-bold">{language === 'ko' ? 'KO' : 'EN'}</span>
+              <span className="text-slate-300">/</span>
+              <span className="text-slate-300">{language === 'ko' ? 'EN' : 'KO'}</span>
+            </button>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-slate-200 hover:text-white hover:bg-slate-700 rounded-lg transition-all"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X size={24} />
+              ) : (
+                <Menu size={24} />
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden border-t border-slate-600 py-2">
+            <div className="flex flex-col gap-1">
+              {tabs.map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => handleTabClick(tab.id)}
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all text-left ${
+                    activeTab === tab.id
+                      ? 'bg-blue-600 text-white'
+                      : 'text-slate-200 hover:text-white hover:bg-slate-700'
+                  }`}
+                >
+                  {t.nav[tab.labelKey]}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
