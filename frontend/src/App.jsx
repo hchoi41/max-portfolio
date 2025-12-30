@@ -261,7 +261,7 @@ const talents = {
     { name: "Business Intelligence 대시보드 개발", category: "기술 & 데이터", desc: "퍼플 사업팀 정기 지표(일일/주간 등) 보고 자동화" },
     { name: "CNN 기반 AI 프로젝트 리드", category: "기술 & 데이터", desc: "2017년 7인팀 표정인식 AI" },
     { name: "영어 교육 사업 운영", category: "재무 & 사업", desc: "PS Edu Holdings $0→$10K/월" },
-    { name: "번역 및 번역 팀 구성", category: "글로벌 & 언어", desc: "PDMO 산하 번역팀 채용 및 글로벌 커뮤니케이션 지원. 프리랜서 30개 이상 게임 프로젝트 번역" },
+    { name: "로컬라이제이션/번역", category: "글로벌 & 언어", desc: "PDMO 산하 번역팀 채용 및 글로벌 커뮤니케이션 지원. 이 외 게임 프로젝트 번역 등" },
     { name: "군 정보 보안 경험", category: "실행 & 관리", desc: "수도방위사령부 정보병 2010-2012" }
   ]
 };
