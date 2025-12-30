@@ -254,13 +254,15 @@ const talents = {
   
   // 이력서에서만 발견된 재능 (구체적 실적, 자격 - 대화에서 깊이 논의 안 됨)
   resumeOnly: [
-    { name: "PMBOK 기반 워크플로우 설계", category: "실행 & 관리", desc: "300+ 이해관계자 구조화" },
-    { name: "CBT 운영 프레임워크 구축", category: "실행 & 관리", desc: "피드백 루프 및 운영 체계 설계" },
-    { name: "대규모 프로젝트 리드 ($3M+)", category: "재무 & 사업", desc: "PURPLE 38개국 론칭 프로젝트" },
+    { name: "PMBOK 기반 워크플로우 설계", category: "실행 & 관리", desc: "퍼플 협의체 설립 및 운영 (300명+ 이해관계자)" },
+    { name: "대규모 글로벌 프로젝트 리드", category: "재무 & 사업", desc: "PURPLE & Lineage 2M for PC 38개국 론칭 프로젝트" },
+    { name: "모바일 게임 글로벌 출시 준비", category: "재무 & 사업", desc: "SINoALICE 150개국 론칭 프로젝트" },
+    { name: "CBT 운영 프레임워크 구축", category: "실행 & 관리", desc: "외부 피드백 루프 및 운영 체계 설계. PDMO 산하 프로젝트 개발 기간 10% 이상 단축" },
+    { name: "Business Intelligence 대시보드 개발", category: "기술 & 데이터", desc: "퍼플 사업팀 정기 지표(일일/주간 등) 보고 자동화" },
     { name: "CNN 기반 AI 프로젝트 리드", category: "기술 & 데이터", desc: "2017년 7인팀 표정인식 AI" },
     { name: "영어 교육 사업 운영", category: "재무 & 사업", desc: "PS Edu Holdings $0→$10K/월" },
-    { name: "군 정보 보안 경험", category: "실행 & 관리", desc: "수도방위사령부 정보병 2010-2012" },
-    { name: "IB 디플로마 학력", category: "글로벌 & 언어", desc: "International School Manila 2003-2007" }
+    { name: "번역 및 번역 팀 구성", category: "글로벌 & 언어", desc: "PDMO 산하 번역팀 채용 및 글로벌 커뮤니케이션 지원. 프리랜서 30개 이상 게임 프로젝트 번역" },
+    { name: "군 정보 보안 경험", category: "실행 & 관리", desc: "수도방위사령부 정보병 2010-2012" }
   ]
 };
 
