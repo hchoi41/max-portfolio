@@ -1511,9 +1511,10 @@ const sanitizeUrl = (value) => {
 
 // ===== LLM API Integration (Backend Ready) =====
 const LLM_API_CONFIG = {
-  // Production: Change these values
-  endpoint: '/api/analyze', // Your backend endpoint
-  enabled: false, // Set to true when backend is ready
+  // Vercel Serverless Function endpoint
+  endpoint: '/api/analyze-jd',
+  // Set to true when ANTHROPIC_API_KEY is configured in Vercel
+  enabled: false, // Change to true after setting API key in Vercel dashboard
 };
 
 // Mock analysis for local testing (Claude's analysis style)
@@ -1589,27 +1590,37 @@ const callAnalysisAPI = async (inputText, inputSource) => {
     return generateMockAnalysis(inputText, inputSource);
   }
   
-  // Production API call
+  // Production API call to Vercel Serverless Function
   const response = await fetch(LLM_API_CONFIG.endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      text: inputText,
-      source: inputSource,
-      candidateProfile: {
-        name: 'Max Choi',
-        background: 'Gaming PM → Finance Transformation',
-        experience: '8+ years',
-        currentStudy: 'University of Illinois MSA'
-      }
+      jdText: inputText,
+      source: inputSource
     })
   });
-  
+
+  const data = await response.json();
+
   if (!response.ok) {
-    throw new Error(`API Error: ${response.status}`);
+    throw new Error(data.message || `API Error: ${response.status}`);
   }
-  
-  return response.json();
+
+  // Transform API response to match frontend format
+  return {
+    timestamp: data.timestamp,
+    source: data.source,
+    stats: data.analysis?.stats || { words: 0, estimatedReadTime: '0 min' },
+    fitAnalysis: {
+      overallScore: data.analysis?.fitAnalysis?.overallScore || 70,
+      verdict: data.analysis?.fitAnalysis?.verdict || 'Analysis Complete',
+      matchedCategories: data.analysis?.fitAnalysis?.matchedCategories || [],
+      gaps: data.analysis?.fitAnalysis?.gaps || []
+    },
+    recommendations: data.analysis?.recommendations || [],
+    fullAnalysis: data.analysis?.fullAnalysis || '',
+    _meta: data._meta
+  };
 };
 
 const InputsTab = () => {
