@@ -228,41 +228,41 @@ const performanceReviewMeta = {
 const talents = {
   // 대화에서만 발견된 재능 (메타인지, 성향, 사고방식 - 이력서에 명시 안 됨)
   conversationOnly: [
-    { name: "의사결정 맥락 판단", category: "전략 & 분석", desc: "1-way vs 2-way door를 구분하고 상황에 맞게 접근" },
-    { name: "전략적 Landscape 분석", category: "전략 & 분석", desc: "다양한 party와 지형을 파악하고 공략/수비 전략 수립" },
-    { name: "지식관리체계 설계", category: "기술 & 데이터", desc: "10년간 구축/운영해온 개인 노트 시스템" },
-    { name: "장기 트렌드 예측", category: "전략 & 분석", desc: "산업/기술의 미래 방향을 읽고 선제적 포지셔닝" },
-    { name: "융합적 패턴 인식", category: "전략 & 분석", desc: "분야 간 연결고리와 경우의 수를 빠르게 파악" },
-    { name: "실패 기반 시스템 개선", category: "실행 & 관리", desc: "경험에서 방법론을 추출하고 접근법을 업데이트" },
-    { name: "솔직한 자기인식", category: "리더십 & 협업", desc: "강점/약점을 객관적으로 파악하고 인정" },
-    { name: "사실 기반 판단 중시", category: "전략 & 분석", desc: "데이터에 기반하여 맥락에 맞는 감정/감성을 더한 의사결정" },
-    { name: "몰입과 끈기", category: "실행 & 관리", desc: "관심 분야에 수년간 깊이 파고드는 집중력과 지구력" }
+    { name: "의사결정 맥락 판단", nameEn: "Decision Context Assessment", category: "전략 & 분석", categoryEn: "Strategy & Analysis", desc: "1-way vs 2-way door를 구분하고 상황에 맞게 접근", descEn: "Distinguishing 1-way vs 2-way doors and adapting approach accordingly" },
+    { name: "전략적 Landscape 분석", nameEn: "Strategic Landscape Analysis", category: "전략 & 분석", categoryEn: "Strategy & Analysis", desc: "다양한 party와 지형을 파악하고 공략/수비 전략 수립", descEn: "Mapping stakeholders and terrain to develop offensive/defensive strategies" },
+    { name: "지식관리체계 설계", nameEn: "Knowledge Management System Design", category: "기술 & 데이터", categoryEn: "Tech & Data", desc: "10년간 구축/운영해온 개인 노트 시스템", descEn: "Personal note system built and maintained over 10 years" },
+    { name: "장기 트렌드 예측", nameEn: "Long-term Trend Forecasting", category: "전략 & 분석", categoryEn: "Strategy & Analysis", desc: "산업/기술의 미래 방향을 읽고 선제적 포지셔닝", descEn: "Reading future direction of industries/technologies for proactive positioning" },
+    { name: "융합적 패턴 인식", nameEn: "Cross-domain Pattern Recognition", category: "전략 & 분석", categoryEn: "Strategy & Analysis", desc: "분야 간 연결고리와 경우의 수를 빠르게 파악", descEn: "Quickly identifying connections and possibilities across domains" },
+    { name: "실패 기반 시스템 개선", nameEn: "Failure-based System Improvement", category: "실행 & 관리", categoryEn: "Execution & Management", desc: "경험에서 방법론을 추출하고 접근법을 업데이트", descEn: "Extracting methodologies from experience and updating approaches" },
+    { name: "솔직한 자기인식", nameEn: "Honest Self-awareness", category: "리더십 & 협업", categoryEn: "Leadership & Collaboration", desc: "강점/약점을 객관적으로 파악하고 인정", descEn: "Objectively recognizing and acknowledging strengths/weaknesses" },
+    { name: "사실 기반 판단 중시", nameEn: "Fact-based Decision Making", category: "전략 & 분석", categoryEn: "Strategy & Analysis", desc: "데이터에 기반하여 맥락에 맞는 감정/감성을 더한 의사결정", descEn: "Data-driven decisions with contextually appropriate emotional intelligence" },
+    { name: "몰입과 끈기", nameEn: "Deep Focus & Persistence", category: "실행 & 관리", categoryEn: "Execution & Management", desc: "관심 분야에 수년간 깊이 파고드는 집중력과 지구력", descEn: "Years of deep concentration and endurance in areas of interest" }
   ],
-  
+
   // 양쪽 모두에서 확인된 재능 (핵심 역량 - 대화에서 논의 + 이력서에 기재)
   intersection: [
-    { name: "한영 바이링궐 커뮤니케이션", category: "글로벌 & 언어", weight: 10 },
-    { name: "글로벌 프로젝트 론칭", category: "글로벌 & 언어", weight: 10 },
-    { name: "M&A/딜 지원 실무", category: "재무 & 사업", weight: 9 },
-    { name: "사업 조건 리스크 검토", category: "재무 & 사업", weight: 8 },
-    { name: "경영진 보고 및 프레젠테이션", category: "리더십 & 협업", weight: 9 },
-    { name: "Power BI/SQL 데이터 분석", category: "기술 & 데이터", weight: 8 },
-    { name: "Cross-functional 리더십", category: "리더십 & 협업", weight: 9 },
-    { name: "프로세스 자동화", category: "기술 & 데이터", weight: 8 },
-    { name: "글로벌 파트너십 관리", category: "글로벌 & 언어", weight: 9 }
+    { name: "한영 바이링궐 커뮤니케이션", nameEn: "KO-EN Bilingual Communication", category: "글로벌 & 언어", categoryEn: "Global & Language", weight: 10 },
+    { name: "글로벌 프로젝트 론칭", nameEn: "Global Project Launch", category: "글로벌 & 언어", categoryEn: "Global & Language", weight: 10 },
+    { name: "M&A/딜 지원 실무", nameEn: "M&A/Deal Support", category: "재무 & 사업", categoryEn: "Finance & Business", weight: 9 },
+    { name: "사업 조건 리스크 검토", nameEn: "Business Terms Risk Review", category: "재무 & 사업", categoryEn: "Finance & Business", weight: 8 },
+    { name: "경영진 보고 및 프레젠테이션", nameEn: "Executive Reporting & Presentations", category: "리더십 & 협업", categoryEn: "Leadership & Collaboration", weight: 9 },
+    { name: "Power BI/SQL 데이터 분석", nameEn: "Power BI/SQL Data Analysis", category: "기술 & 데이터", categoryEn: "Tech & Data", weight: 8 },
+    { name: "Cross-functional 리더십", nameEn: "Cross-functional Leadership", category: "리더십 & 협업", categoryEn: "Leadership & Collaboration", weight: 9 },
+    { name: "프로세스 자동화", nameEn: "Process Automation", category: "기술 & 데이터", categoryEn: "Tech & Data", weight: 8 },
+    { name: "글로벌 파트너십 관리", nameEn: "Global Partnership Management", category: "글로벌 & 언어", categoryEn: "Global & Language", weight: 9 }
   ],
-  
+
   // 이력서에서만 발견된 재능 (구체적 실적, 자격 - 대화에서 깊이 논의 안 됨)
   resumeOnly: [
-    { name: "PMBOK 기반 워크플로우 설계", category: "실행 & 관리", desc: "퍼플 협의체 설립 및 운영 (300명+ 이해관계자)" },
-    { name: "대규모 글로벌 프로젝트 리드", category: "재무 & 사업", desc: "PURPLE & Lineage 2M for PC 38개국 론칭 프로젝트" },
-    { name: "모바일 게임 글로벌 출시 준비", category: "재무 & 사업", desc: "SINoALICE 150개국 론칭 프로젝트" },
-    { name: "CBT 운영 프레임워크 구축", category: "실행 & 관리", desc: "외부 피드백 루프 및 운영 체계 설계. PDMO 산하 프로젝트 개발 기간 10% 이상 단축" },
-    { name: "Business Intelligence 대시보드 개발", category: "기술 & 데이터", desc: "퍼플 사업팀 정기 지표(일일/주간 등) 보고 자동화" },
-    { name: "CNN 기반 AI 프로젝트 리드", category: "기술 & 데이터", desc: "2017년 7인팀 표정인식 AI" },
-    { name: "영어 교육 사업 운영", category: "재무 & 사업", desc: "PS Edu Holdings $0→$10K/월" },
-    { name: "로컬라이제이션/번역", category: "글로벌 & 언어", desc: "PDMO 산하 번역팀 채용 및 글로벌 커뮤니케이션 지원. 이 외 게임 프로젝트 번역 등" },
-    { name: "군 정보 보안 경험", category: "실행 & 관리", desc: "수도방위사령부 정보병 2010-2012" }
+    { name: "PMBOK 기반 워크플로우 설계", nameEn: "PMBOK-based Workflow Design", category: "실행 & 관리", categoryEn: "Execution & Management", desc: "퍼플 협의체 설립 및 운영 (300명+ 이해관계자)", descEn: "Established and operated PURPLE Council (300+ stakeholders)" },
+    { name: "대규모 글로벌 프로젝트 리드", nameEn: "Large-scale Global Project Lead", category: "재무 & 사업", categoryEn: "Finance & Business", desc: "PURPLE & Lineage 2M for PC 38개국 론칭 프로젝트", descEn: "PURPLE & Lineage 2M for PC 38-country launch project" },
+    { name: "모바일 게임 글로벌 출시 준비", nameEn: "Mobile Game Global Launch Prep", category: "재무 & 사업", categoryEn: "Finance & Business", desc: "SINoALICE 150개국 론칭 프로젝트", descEn: "SINoALICE 150-country launch project" },
+    { name: "CBT 운영 프레임워크 구축", nameEn: "CBT Operations Framework", category: "실행 & 관리", categoryEn: "Execution & Management", desc: "외부 피드백 루프 및 운영 체계 설계. PDMO 산하 프로젝트 개발 기간 10% 이상 단축", descEn: "External feedback loop and ops system design. 10%+ dev time reduction for PDMO projects" },
+    { name: "Business Intelligence 대시보드 개발", nameEn: "BI Dashboard Development", category: "기술 & 데이터", categoryEn: "Tech & Data", desc: "퍼플 사업팀 정기 지표(일일/주간 등) 보고 자동화", descEn: "Automated periodic KPI reporting (daily/weekly) for PURPLE business team" },
+    { name: "CNN 기반 AI 프로젝트 리드", nameEn: "CNN-based AI Project Lead", category: "기술 & 데이터", categoryEn: "Tech & Data", desc: "2017년 7인팀 표정인식 AI", descEn: "2017 facial recognition AI with 7-person team" },
+    { name: "영어 교육 사업 운영", nameEn: "English Education Business", category: "재무 & 사업", categoryEn: "Finance & Business", desc: "PS Edu Holdings $0→$10K/월", descEn: "PS Edu Holdings $0→$10K/month" },
+    { name: "로컬라이제이션/번역", nameEn: "Localization/Translation", category: "글로벌 & 언어", categoryEn: "Global & Language", desc: "PDMO 산하 번역팀 채용 및 글로벌 커뮤니케이션 지원. 이 외 게임 프로젝트 번역 등", descEn: "Built PDMO translation team and supported global comms. Various game project translations" },
+    { name: "군 정보 보안 경험", nameEn: "Military Intelligence Security", category: "실행 & 관리", categoryEn: "Execution & Management", desc: "수도방위사령부 정보병 2010-2012", descEn: "Capital Defense Command Intelligence 2010-2012" }
   ]
 };
 
@@ -464,18 +464,24 @@ const jobPositions = [
     id: "fpa",
     title: "FP&A Analyst",
     company: "게임/테크 기업",
+    companyEn: "Gaming/Tech Company",
     fit: 75,
     matchedSkills: ["Power BI/SQL", "대규모 프로젝트 경험", "경영진 보고", "시장 분석", "KPI 대시보드"],
+    matchedSkillsEn: ["Power BI/SQL", "Large-scale Project Experience", "Executive Reporting", "Market Analysis", "KPI Dashboard"],
     gaps: ["직접적 FP&A 경력", "ERP 시스템 경험"],
+    gapsEn: ["Direct FP&A Experience", "ERP System Experience"],
     keywords: ["financial planning", "analysis", "budgeting", "forecasting", "variance", "P&L"]
   },
   {
     id: "strategy",
     title: "Strategy Analyst",
     company: "게임 스타트업",
+    companyEn: "Gaming Startup",
     fit: 82,
     matchedSkills: ["M&A 딜 지원", "시장 분석", "경영진 보고", "글로벌 파트너십", "투자 검토 지원"],
+    matchedSkillsEn: ["M&A Deal Support", "Market Analysis", "Executive Reporting", "Global Partnership", "Investment Review Support"],
     gaps: ["PE/VC 경력", "직접적 IR 경험"],
+    gapsEn: ["PE/VC Experience", "Direct IR Experience"],
     keywords: ["strategy", "M&A", "investment", "IR", "due diligence", "valuation"]
   },
   {
@@ -483,27 +489,36 @@ const jobPositions = [
     title: "FAAS/CMAAS Senior",
     subtitle: "(Financial/Capital Markets Accounting Advisory Services)",
     company: "Big 4 Advisory",
+    companyEn: "Big 4 Advisory",
     fit: 65,
     matchedSkills: ["딜 지원 경험", "회계 석사", "글로벌 경험", "바이링궐"],
+    matchedSkillsEn: ["Deal Support Experience", "MSA in Accounting", "Global Experience", "Bilingual"],
     gaps: ["직접적 회계 실무", "SOX/ITGC 경험", "CPA 자격"],
+    gapsEn: ["Direct Accounting Experience", "SOX/ITGC Experience", "CPA License"],
     keywords: ["FAAS", "CMAAS", "accounting", "advisory", "transaction", "IPO", "audit"]
   },
   {
     id: "pm",
     title: "Strategic PM",
     company: "글로벌 테크",
+    companyEn: "Global Tech",
     fit: 90,
     matchedSkills: ["PMP 자격", "글로벌 론칭", "Cross-functional 리더십", "PMBOK", "이해관계자 관리"],
+    matchedSkillsEn: ["PMP Certification", "Global Launch", "Cross-functional Leadership", "PMBOK", "Stakeholder Management"],
     gaps: ["Agile/Scrum 심화"],
+    gapsEn: ["Advanced Agile/Scrum"],
     keywords: ["project management", "stakeholder", "PMBOK", "agile", "cross-functional", "global"]
   },
   {
     id: "bizdev",
     title: "BD Manager",
     company: "게임 퍼블리셔",
+    companyEn: "Game Publisher",
     fit: 85,
     matchedSkills: ["글로벌 파트너십", "플랫폼 협상", "딜 지원", "계약 분석", "바이링궐"],
+    matchedSkillsEn: ["Global Partnership", "Platform Negotiation", "Deal Support", "Contract Analysis", "Bilingual"],
     gaps: ["독립적 딜 클로징 경험"],
+    gapsEn: ["Independent Deal Closing Experience"],
     keywords: ["business development", "partnership", "negotiation", "deal", "licensing", "publishing"]
   }
 ];
@@ -977,31 +992,34 @@ const TalentsTab = () => {
         {/* Flow Diagram */}
         <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 mb-8">
           {[
-            { 
-              id: 'talents', 
-              label: '재능', 
+            {
+              id: 'talents',
+              label: '재능',
               labelEn: 'Talents',
-              count: vennStats.conversationOnly, 
+              count: vennStats.conversationOnly,
               color: 'blue',
               desc: '어떤 특성을 가졌나',
+              descEn: 'What traits I have',
               icon: '💎'
             },
-            { 
-              id: 'capabilities', 
-              label: '역량', 
+            {
+              id: 'capabilities',
+              label: '역량',
               labelEn: 'Capabilities',
-              count: vennStats.intersection, 
+              count: vennStats.intersection,
               color: 'yellow',
               desc: '제공할 수 있는 서비스',
+              descEn: 'Services I can provide',
               icon: '⚡'
             },
-            { 
-              id: 'achievements', 
-              label: '결과물', 
+            {
+              id: 'achievements',
+              label: '결과물',
               labelEn: 'Achievements',
-              count: vennStats.resumeOnly, 
+              count: vennStats.resumeOnly,
               color: 'emerald',
               desc: '해낸 것',
+              descEn: 'What I have done',
               icon: '🏆'
             }
           ].map((item, idx) => {
@@ -1031,8 +1049,8 @@ const TalentsTab = () => {
                 >
                   <div className="text-2xl mb-1">{item.icon}</div>
                   <div className={`text-xl sm:text-2xl font-bold ${textColors[item.color]}`}>{item.count}</div>
-                  <div className="text-white font-medium text-sm sm:text-base">{item.label}</div>
-                  <div className="text-xs text-slate-300 mt-1 leading-relaxed">{item.desc}</div>
+                  <div className="text-white font-medium text-sm sm:text-base">{language === 'ko' ? item.label : item.labelEn}</div>
+                  <div className="text-xs text-slate-300 mt-1 leading-relaxed">{language === 'ko' ? item.desc : item.descEn}</div>
                 </button>
               </React.Fragment>
             );
@@ -1050,9 +1068,11 @@ const TalentsTab = () => {
             selectedSection === 'achievements' ? 'text-emerald-300' :
             'text-yellow-300'
           }`}>
-            {selectedSection === 'talents' ? '💎 재능 — 어떤 특성을 가졌나' :
-             selectedSection === 'achievements' ? '🏆 결과물 — 해낸 것' :
-             '⚡ 역량 — 제공할 수 있는 서비스'}
+            {selectedSection === 'talents'
+              ? (language === 'ko' ? '💎 재능 — 어떤 특성을 가졌나' : '💎 Talents — What traits I have')
+              : selectedSection === 'achievements'
+              ? (language === 'ko' ? '🏆 결과물 — 해낸 것' : '🏆 Achievements — What I have done')
+              : (language === 'ko' ? '⚡ 역량 — 제공할 수 있는 서비스' : '⚡ Capabilities — Services I can provide')}
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {getCurrentTalents().map((t, i) => (
@@ -1065,9 +1085,9 @@ const TalentsTab = () => {
                   selectedSection === 'achievements' ? 'text-emerald-400' : 'text-yellow-400'
                 }`}>{(i+1).toString().padStart(2,'0')}</span>
                 <div className="flex-1">
-                  <div className="text-slate-200 text-sm font-medium">{t.name}</div>
-                  <div className="text-xs text-slate-400">{t.category}</div>
-                  {t.desc && <div className="text-xs text-slate-200 mt-1">{t.desc}</div>}
+                  <div className="text-slate-200 text-sm font-medium">{language === 'ko' ? t.name : (t.nameEn || t.name)}</div>
+                  <div className="text-xs text-slate-400">{language === 'ko' ? t.category : (t.categoryEn || t.category)}</div>
+                  {t.desc && <div className="text-xs text-slate-200 mt-1">{language === 'ko' ? t.desc : (t.descEn || t.desc)}</div>}
                 </div>
               </div>
             ))}
@@ -1252,7 +1272,7 @@ const PositionsTab = () => {
           >
             <div className="text-2xl font-bold text-white mb-1">{pos.fit}%</div>
             <div className="font-medium text-slate-200 text-sm">{pos.title}</div>
-            <div className="text-xs text-slate-400">{pos.company}</div>
+            <div className="text-xs text-slate-400">{language === 'ko' ? pos.company : pos.companyEn}</div>
           </button>
         ))}
       </div>
@@ -1265,14 +1285,14 @@ const PositionsTab = () => {
               {selectedPosition.subtitle && (
                 <p className="text-sm text-blue-400">{selectedPosition.subtitle}</p>
               )}
-              <p className="text-slate-200">{selectedPosition.company}</p>
+              <p className="text-slate-200">{language === 'ko' ? selectedPosition.company : selectedPosition.companyEn}</p>
             </div>
             <div className="text-right">
               <div className={`text-4xl font-bold ${
                 selectedPosition.fit >= 80 ? 'text-emerald-400' :
                 selectedPosition.fit >= 65 ? 'text-blue-400' : 'text-blue-400'
               }`}>{selectedPosition.fit}%</div>
-              <div className="text-sm text-slate-400">적합도</div>
+              <div className="text-sm text-slate-400">{language === 'ko' ? '적합도' : 'Fit Score'}</div>
             </div>
           </div>
           
@@ -1288,9 +1308,9 @@ const PositionsTab = () => {
           
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-medium text-emerald-400 mb-3 flex items-center gap-2">매칭 역량</h4>
+              <h4 className="font-medium text-emerald-400 mb-3 flex items-center gap-2">{language === 'ko' ? '매칭 역량' : 'Matched Skills'}</h4>
               <div className="space-y-2">
-                {selectedPosition.matchedSkills.map((skill, i) => (
+                {(language === 'ko' ? selectedPosition.matchedSkills : selectedPosition.matchedSkillsEn).map((skill, i) => (
                   <div key={i} className="flex items-center gap-2 text-slate-200">
                     <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
                     {skill}
@@ -1299,9 +1319,9 @@ const PositionsTab = () => {
               </div>
             </div>
             <div>
-              <h4 className="font-medium text-blue-400 mb-3 flex items-center gap-2">보완 필요</h4>
+              <h4 className="font-medium text-blue-400 mb-3 flex items-center gap-2">{language === 'ko' ? '보완 필요' : 'Gaps to Fill'}</h4>
               <div className="space-y-2">
-                {selectedPosition.gaps.map((gap, i) => (
+                {(language === 'ko' ? selectedPosition.gaps : selectedPosition.gapsEn).map((gap, i) => (
                   <div key={i} className="flex items-center gap-2 text-slate-200">
                     <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                     {gap}
@@ -1379,7 +1399,7 @@ const SkillsTab = () => {
         </div>
         {searchTerm && (
           <div className="text-center text-sm text-slate-400 mt-2">
-            {filteredCount}개 결과
+            {filteredCount} {language === 'ko' ? '개 결과' : 'results'}
           </div>
         )}
       </div>
@@ -1593,6 +1613,7 @@ const callAnalysisAPI = async (inputText, inputSource) => {
 };
 
 const InputsTab = () => {
+  const { language } = useLanguage();
   const fileInputRef = useRef(null);
 
   const [selectedFile, setSelectedFile] = useState(null);
@@ -1814,14 +1835,18 @@ const InputsTab = () => {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-white mb-2">📎 JD 입력 & AI 분석</h2>
+        <h2 className="text-2xl font-bold text-white mb-2">{language === 'ko' ? '📎 JD 입력 & AI 분석' : '📎 JD Input & AI Analysis'}</h2>
         <p className="text-slate-200">
-          Job Description을 파일, URL, 또는 텍스트로 입력하면 AI가 적합도를 분석합니다.
+          {language === 'ko'
+            ? 'Job Description을 파일, URL, 또는 텍스트로 입력하면 AI가 적합도를 분석합니다.'
+            : 'Upload a file, URL, or paste text and AI will analyze fit score.'}
         </p>
         <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 bg-slate-800 rounded-full text-xs">
           <span className={`w-2 h-2 rounded-full ${LLM_API_CONFIG.enabled ? 'bg-emerald-500' : 'bg-blue-500'}`}></span>
           <span className="text-slate-200">
-            {LLM_API_CONFIG.enabled ? 'LLM API 연결됨' : '로컬 테스트 모드 (Mock Analysis)'}
+            {LLM_API_CONFIG.enabled
+              ? (language === 'ko' ? 'LLM API 연결됨' : 'LLM API Connected')
+              : (language === 'ko' ? '로컬 테스트 모드 (Mock Analysis)' : 'Local Test Mode (Mock Analysis)')}
           </span>
         </div>
       </div>
@@ -1830,7 +1855,7 @@ const InputsTab = () => {
         
         {/* File Upload */}
         <div>
-          <label className="block text-sm font-medium text-slate-200 mb-2">📁 파일 업로드</label>
+          <label className="block text-sm font-medium text-slate-200 mb-2">{language === 'ko' ? '📁 파일 업로드' : '📁 File Upload'}</label>
           <div
             tabIndex={0}
             onPaste={handlePaste}
@@ -1840,7 +1865,7 @@ const InputsTab = () => {
           >
             <div className="flex items-center justify-between gap-4">
               <div className="text-sm text-slate-200">
-                .txt .md .pdf .doc .docx + 이미지 | 드래그&드롭 또는 Ctrl+V
+                {language === 'ko' ? '.txt .md .pdf .doc .docx + 이미지 | 드래그&드롭 또는 Ctrl+V' : '.txt .md .pdf .doc .docx + images | Drag & Drop or Ctrl+V'}
               </div>
               <div className="flex items-center gap-2">
                 <input
@@ -1854,7 +1879,7 @@ const InputsTab = () => {
                   onClick={handlePickFile}
                   className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-sm transition-all"
                 >
-                  파일 선택
+                  {language === 'ko' ? '파일 선택' : 'Choose File'}
                 </button>
               </div>
             </div>
@@ -1875,7 +1900,7 @@ const InputsTab = () => {
 
         {/* URL Input */}
         <div>
-          <label className="block text-sm font-medium text-slate-200 mb-2">URL 입력</label>
+          <label className="block text-sm font-medium text-slate-200 mb-2">{language === 'ko' ? 'URL 입력' : 'URL Input'}</label>
           <div className="flex gap-2">
             <input
               value={sourceUrl}
@@ -1888,19 +1913,19 @@ const InputsTab = () => {
               disabled={!sourceUrl.trim() || urlFetching}
               className="px-4 py-2 bg-slate-700 hover:bg-slate-600 disabled:bg-slate-800 disabled:text-slate-400 text-white rounded-lg text-sm transition-all whitespace-nowrap"
             >
-              {urlFetching ? '가져오는 중...' : '내용 가져오기'}
+              {urlFetching ? (language === 'ko' ? '가져오는 중...' : 'Fetching...') : (language === 'ko' ? '내용 가져오기' : 'Fetch Content')}
             </button>
           </div>
           {urlContent && (
             <div className="mt-2 p-2 bg-emerald-900/20/20 border border-emerald-500/50/30 rounded-lg">
-              <div className="text-xs text-emerald-400">URL에서 {urlContent.length.toLocaleString()}자 추출됨</div>
+              <div className="text-xs text-emerald-400">{language === 'ko' ? `URL에서 ${urlContent.length.toLocaleString()}자 추출됨` : `${urlContent.length.toLocaleString()} characters extracted from URL`}</div>
             </div>
           )}
         </div>
 
         {/* Text Paste */}
         <div>
-          <label className="block text-sm font-medium text-slate-200 mb-2">📝 텍스트 직접 입력 (권장)</label>
+          <label className="block text-sm font-medium text-slate-200 mb-2">{language === 'ko' ? '📝 텍스트 직접 입력 (권장)' : '📝 Paste Text (Recommended)'}</label>
           <textarea
             value={pastedText}
             onChange={(e) => setPastedText(e.target.value)}
@@ -1944,20 +1969,20 @@ const InputsTab = () => {
               onClick={resetInputs}
               className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-sm border border-slate-600 transition-all"
             >
-              입력 초기화
+              {language === 'ko' ? '입력 초기화' : 'Reset'}
             </button>
             <button
               onClick={runAnalysis}
               disabled={!canAnalyze() || analyzing}
               className="px-8 py-3 bg-gradient-to-r from-blue-900 to-indigo-700 hover:from-blue-950 hover:to-purple-900 disabled:from-slate-800 disabled:to-slate-700 disabled:cursor-not-allowed text-white font-bold rounded-xl text-lg transition-all shadow-lg hover:shadow-blue-500/25"
             >
-              {analyzing ? '분석 중...' : '분석하기'}
+              {analyzing ? (language === 'ko' ? '분석 중...' : 'Analyzing...') : (language === 'ko' ? '분석하기' : 'Analyze')}
             </button>
           </div>
           <div className="text-center mt-2 text-xs text-slate-400">
-            {canAnalyze() 
-              ? `분석 준비 완료 (${getInputText()?.text.length.toLocaleString()}자)`
-              : '텍스트를 입력해주세요 (파일/URL/직접입력 중 택1)'}
+            {canAnalyze()
+              ? (language === 'ko' ? `분석 준비 완료 (${getInputText()?.text.length.toLocaleString()}자)` : `Ready to analyze (${getInputText()?.text.length.toLocaleString()} chars)`)
+              : (language === 'ko' ? '텍스트를 입력해주세요 (파일/URL/직접입력 중 택1)' : 'Please enter text (file/URL/paste)')}
           </div>
         </div>
       </div>
@@ -1966,9 +1991,11 @@ const InputsTab = () => {
       <div className="bg-slate-800/50 border border-slate-600 rounded-xl p-6 space-y-4">
         <div className="flex items-center justify-between gap-3 flex-wrap">
           <div>
-            <h3 className="text-lg font-bold text-white">분석 결과</h3>
+            <h3 className="text-lg font-bold text-white">{language === 'ko' ? '분석 결과' : 'Analysis Result'}</h3>
             <div className="text-xs text-slate-400">
-              {analysisResult ? `마지막 분석: ${new Date(analysisResult.timestamp).toLocaleString()}` : '아직 분석 결과가 없습니다.'}
+              {analysisResult
+                ? (language === 'ko' ? `마지막 분석: ${new Date(analysisResult.timestamp).toLocaleString()}` : `Last analyzed: ${new Date(analysisResult.timestamp).toLocaleString()}`)
+                : (language === 'ko' ? '아직 분석 결과가 없습니다.' : 'No analysis result yet.')}
             </div>
           </div>
           {analysisResult && (
@@ -1977,13 +2004,13 @@ const InputsTab = () => {
                 onClick={copyAnalysis}
                 className="px-3 py-1 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-sm transition-all"
               >
-                복사
+                {language === 'ko' ? '복사' : 'Copy'}
               </button>
               <button
                 onClick={clearAnalysis}
                 className="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-sm border border-slate-600 transition-all"
               >
-                삭제
+                {language === 'ko' ? '삭제' : 'Clear'}
               </button>
             </div>
           )}
@@ -2001,14 +2028,16 @@ const InputsTab = () => {
               </div>
               <div className="text-xl mt-2">{analysisResult.fitAnalysis.verdict}</div>
               <div className="text-sm text-slate-400 mt-1">
-                {analysisResult.stats.words.toLocaleString()} 단어 분석 • {analysisResult.stats.estimatedReadTime} 읽기
+                {language === 'ko'
+                  ? `${analysisResult.stats.words.toLocaleString()} 단어 분석 • ${analysisResult.stats.estimatedReadTime} 읽기`
+                  : `${analysisResult.stats.words.toLocaleString()} words analyzed • ${analysisResult.stats.estimatedReadTime} read`}
               </div>
             </div>
 
             {/* Category Breakdown */}
             {analysisResult.fitAnalysis.matchedCategories.length > 0 && (
               <div>
-                <h4 className="font-medium text-white mb-3">카테고리별 매칭</h4>
+                <h4 className="font-medium text-white mb-3">{language === 'ko' ? '카테고리별 매칭' : 'Category Matching'}</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {analysisResult.fitAnalysis.matchedCategories.map((cat, i) => (
                     <div key={i} className="p-3 bg-slate-800/50 border border-slate-600 rounded-lg">
@@ -2033,7 +2062,7 @@ const InputsTab = () => {
 
             {/* Recommendations */}
             <div>
-              <h4 className="font-medium text-white mb-3">추천 사항</h4>
+              <h4 className="font-medium text-white mb-3">{language === 'ko' ? '추천 사항' : 'Recommendations'}</h4>
               <div className="space-y-2">
                 {analysisResult.recommendations.map((rec, i) => (
                   <div key={i} className="flex items-start gap-2 text-slate-200 text-sm">
@@ -2047,7 +2076,7 @@ const InputsTab = () => {
             {/* Gaps if any */}
             {analysisResult.fitAnalysis.gaps.length > 0 && (
               <div>
-                <h4 className="font-medium text-blue-400 mb-3">보완 필요 영역</h4>
+                <h4 className="font-medium text-blue-400 mb-3">{language === 'ko' ? '보완 필요 영역' : 'Areas to Improve'}</h4>
                 <div className="space-y-2">
                   {analysisResult.fitAnalysis.gaps.map((gap, i) => (
                     <div key={i} className="flex items-center gap-2 text-slate-200 text-sm">
@@ -2061,8 +2090,8 @@ const InputsTab = () => {
 
             {/* Meta info */}
             <div className="pt-4 border-t border-slate-600 text-xs text-slate-400">
-              <div>분석 모델: {analysisResult._meta?.model || 'Unknown'}</div>
-              <div>소스: {analysisResult.source}</div>
+              <div>{language === 'ko' ? '분석 모델' : 'Model'}: {analysisResult._meta?.model || 'Unknown'}</div>
+              <div>{language === 'ko' ? '소스' : 'Source'}: {analysisResult.source}</div>
               {analysisResult._meta?.note && (
                 <div className="mt-1 text-blue-400/70">{analysisResult._meta.note}</div>
               )}
@@ -2071,8 +2100,8 @@ const InputsTab = () => {
         ) : (
           <div className="text-center py-12 text-slate-400">
             <div className="text-4xl mb-4 text-slate-400">?</div>
-            <div>JD를 입력하고 "분석하기" 버튼을 눌러주세요.</div>
-            <div className="text-sm mt-2">파일 업로드, URL, 또는 직접 텍스트 입력 가능</div>
+            <div>{language === 'ko' ? 'JD를 입력하고 "분석하기" 버튼을 눌러주세요.' : 'Enter JD and click "Analyze" button.'}</div>
+            <div className="text-sm mt-2">{language === 'ko' ? '파일 업로드, URL, 또는 직접 텍스트 입력 가능' : 'File upload, URL, or paste text available'}</div>
           </div>
         )}
       </div>
@@ -2527,9 +2556,9 @@ const ContactTab = () => {
     
     try {
       await navigator.clipboard.writeText(emailContent);
-      setStatus({ type: 'success', message: '이메일 내용이 클립보드에 복사되었습니다. 이메일 앱에 붙여넣기 해주세요.' });
+      setStatus({ type: 'success', message: language === 'ko' ? '이메일 내용이 클립보드에 복사되었습니다. 이메일 앱에 붙여넣기 해주세요.' : 'Email content copied to clipboard. Paste it in your email app.' });
     } catch {
-      setStatus({ type: 'error', message: '복사 실패. 직접 내용을 복사해주세요.' });
+      setStatus({ type: 'error', message: language === 'ko' ? '복사 실패. 직접 내용을 복사해주세요.' : 'Copy failed. Please copy manually.' });
     }
   };
 
@@ -2538,7 +2567,7 @@ const ContactTab = () => {
     e.preventDefault();
     
     if (!canSubmit()) {
-      setStatus({ type: 'error', message: '모든 필드를 올바르게 입력해주세요.' });
+      setStatus({ type: 'error', message: language === 'ko' ? '모든 필드를 올바르게 입력해주세요.' : 'Please fill in all fields correctly.' });
       return;
     }
 
@@ -2583,9 +2612,11 @@ const ContactTab = () => {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-white mb-2">연락하기</h2>
+        <h2 className="text-2xl font-bold text-white mb-2">{t.sections.contact}</h2>
         <p className="text-slate-200">
-          Max Choi에게 메시지를 보내세요. 채용 문의, 협업 제안, 피드백 등 환영합니다!
+          {language === 'ko'
+            ? 'Max Choi에게 메시지를 보내세요. 채용 문의, 협업 제안, 피드백 등 환영합니다!'
+            : 'Send a message to Max Choi. Hiring inquiries, collaboration proposals, and feedback are all welcome!'}
         </p>
       </div>
 
@@ -2625,30 +2656,30 @@ const ContactTab = () => {
       {/* Email Form */}
       <form onSubmit={handleSubmit} className="bg-slate-800/50 border border-slate-600 rounded-xl p-6 space-y-6">
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-bold text-white">📝 메시지 작성</h3>
+          <h3 className="text-lg font-bold text-white">{language === 'ko' ? '📝 메시지 작성' : '📝 Write Message'}</h3>
           <div className="text-xs text-slate-400">
-            수신: <span className="text-blue-400 font-mono">{CONTACT_EMAIL}</span> (고정)
+            {language === 'ko' ? '수신' : 'To'}: <span className="text-blue-400 font-mono">{CONTACT_EMAIL}</span> {language === 'ko' ? '(고정)' : '(fixed)'}
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-200 mb-2">
-              이름 <span className="text-red-400">*</span>
+              {language === 'ko' ? '이름' : 'Name'} <span className="text-red-400">*</span>
             </label>
             <input
               type="text"
               name="senderName"
               value={formData.senderName}
               onChange={handleChange}
-              placeholder="홍길동"
+              placeholder={language === 'ko' ? '홍길동' : 'John Doe'}
               className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-400 focus:border-slate-600 focus:outline-none"
               required
             />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-200 mb-2">
-              이메일 <span className="text-red-400">*</span>
+              {language === 'ko' ? '이메일' : 'Email'} <span className="text-red-400">*</span>
             </label>
             <input
               type="email"
@@ -2664,14 +2695,14 @@ const ContactTab = () => {
 
         <div>
           <label className="block text-sm font-medium text-slate-200 mb-2">
-            제목 <span className="text-red-400">*</span>
+            {language === 'ko' ? '제목' : 'Subject'} <span className="text-red-400">*</span>
           </label>
           <input
             type="text"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            placeholder="문의 제목을 입력해주세요"
+            placeholder={language === 'ko' ? '문의 제목을 입력해주세요' : 'Enter subject'}
             className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-400 focus:border-slate-600 focus:outline-none"
             required
           />
@@ -2679,20 +2710,22 @@ const ContactTab = () => {
 
         <div>
           <label className="block text-sm font-medium text-slate-200 mb-2">
-            메시지 <span className="text-red-400">*</span>
+            {language === 'ko' ? '메시지' : 'Message'} <span className="text-red-400">*</span>
           </label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="안녕하세요! ... (최소 10자 이상 입력해주세요)"
+            placeholder={language === 'ko' ? '안녕하세요! ... (최소 10자 이상 입력해주세요)' : 'Hello! ... (minimum 10 characters)'}
             rows={6}
             className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-400 focus:border-slate-600 focus:outline-none resize-none"
             required
           />
           <div className="flex justify-between mt-1">
             <span className={`text-xs ${formData.message.length >= 10 ? 'text-emerald-400' : 'text-slate-400'}`}>
-              {formData.message.length}자 입력됨 {formData.message.length < 10 && '(최소 10자)'}
+              {language === 'ko'
+                ? `${formData.message.length}자 입력됨 ${formData.message.length < 10 ? '(최소 10자)' : ''}`
+                : `${formData.message.length} characters ${formData.message.length < 10 ? '(min 10)' : ''}`}
             </span>
           </div>
         </div>
@@ -2715,7 +2748,7 @@ const ContactTab = () => {
             disabled={!canSubmit() || sending}
             className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-900 to-indigo-700 hover:from-blue-950 hover:to-purple-900 disabled:from-slate-800 disabled:to-slate-700 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25"
           >
-            {sending ? 'Sending...' : 'Send Email'}
+            {sending ? (language === 'ko' ? '전송 중...' : 'Sending...') : (language === 'ko' ? '이메일 보내기' : 'Send Email')}
           </button>
           <button
             type="button"
@@ -2723,20 +2756,21 @@ const ContactTab = () => {
             disabled={!canSubmit()}
             className="px-6 py-3 bg-slate-700 hover:bg-slate-600 disabled:bg-slate-800 disabled:text-slate-400 text-white rounded-xl transition-all"
           >
-            내용 복사
+            {language === 'ko' ? '내용 복사' : 'Copy Content'}
           </button>
           <button
             type="button"
             onClick={resetForm}
             className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl border border-slate-600 transition-all"
           >
-            초기화
+            {language === 'ko' ? '초기화' : 'Reset'}
           </button>
         </div>
 
         <div className="text-xs text-slate-400 text-center">
-          "이메일 보내기" 클릭 시 기본 이메일 앱이 열립니다. 
-          앱이 없으면 "내용 복사" 후 직접 이메일을 발송해주세요.
+          {language === 'ko'
+            ? '"이메일 보내기" 클릭 시 기본 이메일 앱이 열립니다. 앱이 없으면 "내용 복사" 후 직접 이메일을 발송해주세요.'
+            : 'Clicking "Send Email" opens your default email app. If unavailable, use "Copy Content" and send manually.'}
         </div>
       </form>
 
@@ -2744,21 +2778,27 @@ const ContactTab = () => {
       <div className="bg-slate-800/50 border border-slate-600 rounded-xl p-6">
         <div className="space-y-4">
           <div>
-            <div className="font-medium text-blue-400 mb-1">어떤 문의가 가능한가요?</div>
+            <div className="font-medium text-blue-400 mb-1">{language === 'ko' ? '어떤 문의가 가능한가요?' : 'What can I contact you about?'}</div>
             <div className="text-sm text-slate-200">
-              채용 제안, 프로젝트 협업, 커리어 상담, 포트폴리오 피드백 등 어떤 내용이든 환영합니다.
+              {language === 'ko'
+                ? '채용 제안, 프로젝트 협업, 커리어 상담, 포트폴리오 피드백 등 어떤 내용이든 환영합니다.'
+                : 'Hiring offers, project collaboration, career consulting, portfolio feedback - anything is welcome.'}
             </div>
           </div>
           <div>
-            <div className="font-medium text-blue-400 mb-1">답변은 얼마나 걸리나요?</div>
+            <div className="font-medium text-blue-400 mb-1">{language === 'ko' ? '답변은 얼마나 걸리나요?' : 'How long does it take to respond?'}</div>
             <div className="text-sm text-slate-200">
-              보통 24-48시간 내에 답변드리지만, 상황에 따라 조금 더 걸릴 수 있습니다.
+              {language === 'ko'
+                ? '보통 24-48시간 내에 답변드리지만, 상황에 따라 조금 더 걸릴 수 있습니다.'
+                : 'Usually within 24-48 hours, but it may take a bit longer depending on circumstances.'}
             </div>
           </div>
           <div>
-            <div className="font-medium text-blue-400 mb-1">LinkedIn으로도 연락 가능한가요?</div>
+            <div className="font-medium text-blue-400 mb-1">{language === 'ko' ? 'LinkedIn으로도 연락 가능한가요?' : 'Can I contact you via LinkedIn?'}</div>
             <div className="text-sm text-slate-200">
-              네, LinkedIn 메시지도 확인합니다. 위의 LinkedIn 링크를 통해 연결 요청해주세요.
+              {language === 'ko'
+                ? '네, LinkedIn 메시지도 확인합니다. 위의 LinkedIn 링크를 통해 연결 요청해주세요.'
+                : 'Yes, I check LinkedIn messages too. Please connect via the LinkedIn link above.'}
             </div>
           </div>
         </div>
