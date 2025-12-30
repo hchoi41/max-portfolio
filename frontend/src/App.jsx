@@ -2519,52 +2519,36 @@ const CONTACT_EMAIL = 'hchoi41@illinois.edu';
 const ContactTab = () => {
   const { language, t } = useLanguage();
   const [formData, setFormData] = useState({
-    senderName: '',
-    senderEmail: '',
     subject: '',
     message: ''
   });
   const [status, setStatus] = useState(null);
-  const [sending, setSending] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const validateEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
   const canSubmit = () => {
-    return formData.senderName.trim() &&
-           formData.senderEmail.trim() &&
-           validateEmail(formData.senderEmail) &&
-           formData.subject.trim() &&
+    return formData.subject.trim() &&
            formData.message.trim().length >= 10;
   };
 
   // Method 1: mailto link (works everywhere, opens email client)
   const handleMailto = () => {
     const subject = encodeURIComponent(`[Portfolio] ${formData.subject}`);
-    const body = encodeURIComponent(
-      `${language === 'ko' ? '보낸 사람' : 'From'}: ${formData.senderName}\n` +
-      `${language === 'ko' ? '이메일' : 'Email'}: ${formData.senderEmail}\n\n` +
-      `---\n\n${formData.message}`
-    );
+    const body = encodeURIComponent(formData.message);
     window.open(`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`, '_blank');
     setStatus({ type: 'info', message: language === 'ko' ? '이메일 클라이언트가 열렸습니다. 발송을 완료해주세요.' : 'Email client opened. Please complete sending.' });
   };
 
   // Method 2: Copy to clipboard (fallback)
   const handleCopy = async () => {
-    const emailContent = 
+    const emailContent =
       `${language === 'ko' ? '수신' : 'To'}: ${CONTACT_EMAIL}\n` +
       `${language === 'ko' ? '제목' : 'Subject'}: [Portfolio] ${formData.subject}\n\n` +
-      `${language === 'ko' ? '보낸 사람' : 'From'}: ${formData.senderName}\n` +
-      `${language === 'ko' ? '이메일' : 'Email'}: ${formData.senderEmail}\n\n` +
-      `---\n\n${formData.message}`;
-    
+      `${formData.message}`;
+
     try {
       await navigator.clipboard.writeText(emailContent);
       setStatus({ type: 'success', message: language === 'ko' ? '이메일 내용이 클립보드에 복사되었습니다. 이메일 앱에 붙여넣기 해주세요.' : 'Email content copied to clipboard. Paste it in your email app.' });
@@ -2573,50 +2557,19 @@ const ContactTab = () => {
     }
   };
 
-  // Method 3: Backend API (for future implementation)
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!canSubmit()) {
-      setStatus({ type: 'error', message: language === 'ko' ? '모든 필드를 올바르게 입력해주세요.' : 'Please fill in all fields correctly.' });
+      setStatus({ type: 'error', message: language === 'ko' ? '제목과 메시지를 입력해주세요.' : 'Please enter subject and message.' });
       return;
     }
 
-    // For now, use mailto as primary method
-    // In production, you can replace this with actual API call:
-    /*
-    setSending(true);
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          to: CONTACT_EMAIL, // Fixed recipient
-          from: formData.senderEmail,
-          name: formData.senderName,
-          subject: formData.subject,
-          message: formData.message
-        })
-      });
-      
-      if (response.ok) {
-        setStatus({ type: 'success', message: '메시지가 성공적으로 전송되었습니다!' });
-        setFormData({ senderName: '', senderEmail: '', subject: '', message: '' });
-      } else {
-        throw new Error('Send failed');
-      }
-    } catch (err) {
-      setStatus({ type: 'error', message: '전송 실패. 다시 시도해주세요.' });
-    } finally {
-      setSending(false);
-    }
-    */
-    
     handleMailto();
   };
 
   const resetForm = () => {
-    setFormData({ senderName: '', senderEmail: '', subject: '', message: '' });
+    setFormData({ subject: '', message: '' });
     setStatus(null);
   };
 
@@ -2673,37 +2626,6 @@ const ContactTab = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-slate-200 mb-2">
-              {language === 'ko' ? '이름' : 'Name'} <span className="text-red-400">*</span>
-            </label>
-            <input
-              type="text"
-              name="senderName"
-              value={formData.senderName}
-              onChange={handleChange}
-              placeholder={language === 'ko' ? '홍길동' : 'John Doe'}
-              className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-400 focus:border-slate-600 focus:outline-none"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-slate-200 mb-2">
-              {language === 'ko' ? '이메일' : 'Email'} <span className="text-red-400">*</span>
-            </label>
-            <input
-              type="email"
-              name="senderEmail"
-              value={formData.senderEmail}
-              onChange={handleChange}
-              placeholder="your@email.com"
-              className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-400 focus:border-slate-600 focus:outline-none"
-              required
-            />
-          </div>
-        </div>
-
         <div>
           <label className="block text-sm font-medium text-slate-200 mb-2">
             {language === 'ko' ? '제목' : 'Subject'} <span className="text-red-400">*</span>
@@ -2756,10 +2678,10 @@ const ContactTab = () => {
         <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-600">
           <button
             type="submit"
-            disabled={!canSubmit() || sending}
+            disabled={!canSubmit()}
             className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-900 to-indigo-700 hover:from-blue-950 hover:to-purple-900 disabled:from-slate-800 disabled:to-slate-700 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25"
           >
-            {sending ? (language === 'ko' ? '전송 중...' : 'Sending...') : (language === 'ko' ? '이메일 보내기' : 'Send Email')}
+            {language === 'ko' ? '이메일 보내기' : 'Send Email'}
           </button>
           <button
             type="button"
