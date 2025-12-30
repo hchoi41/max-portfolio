@@ -320,7 +320,7 @@ const achievementsData = [
     }
   },
   { 
-    metric: "13M+", 
+    metric: "1,300만명+",
     label: "사전예약 (퍼플 + 리니지2M PC)",
     labelEn: "Pre-registrations (PURPLE + L2M PC)",
     
