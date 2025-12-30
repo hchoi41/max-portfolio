@@ -513,31 +513,31 @@ const skillsData = {
     color: "#10B981",
     skills: [
       { name: "Financial Modeling", source: "CFI Course" },
-      { name: "Accounting", source: "University of Illinois MSA" },
-      { name: "Financial Accounting", source: "University of Illinois MSA" },
-      { name: "Tax Accounting", source: "University of Illinois MSA" },
-      { name: "Auditing", source: "University of Illinois MSA" },
-      { name: "Managerial Accounting", source: "University of Illinois MSA" },
-      { name: "Cost Accounting", source: "University of Illinois MSA" }
+      { name: "Accounting", source: "UIUC MSA" },
+      { name: "Financial Accounting", source: "UIUC MSA" },
+      { name: "Tax Accounting", source: "UIUC MSA" },
+      { name: "Auditing", source: "UIUC MSA" },
+      { name: "Managerial Accounting", source: "UIUC MSA" },
+      { name: "Cost Accounting", source: "UIUC MSA" }
     ]
   },
   "Data & Analytics": {
     
     color: "#3B82F6",
     skills: [
-      { name: "Analytics", source: "NCSOFT, Pennsylvania State" },
-      { name: "Statistics", source: "Pennsylvania State" },
+      { name: "Analytics", source: "NCSOFT, PSU" },
+      { name: "Statistics", source: "PSU" },
       { name: "Business Intelligence (BI)", source: "NCSOFT" },
-      { name: "Data Mining", source: "Pennsylvania State" },
-      { name: "Data Modeling", source: "Pennsylvania State, Power BI" },
+      { name: "Data Mining", source: "PSU" },
+      { name: "Data Modeling", source: "PSU, Power BI" },
       { name: "Data Visualization", source: "Power BI Cert" },
       { name: "ETL (Extract, Transform, Load)", source: "실무 경험" },
       { name: "Microsoft Power BI", source: "MS 자격증" },
-      { name: "Tableau", source: "University of Illinois" },
+      { name: "Tableau", source: "UIUC" },
       { name: "Microsoft Excel", source: "다수 자격증" },
       { name: "DAX", source: "Power BI Cert" },
       { name: "SQL", source: "NCSOFT, 자격증" },
-      { name: "R", source: "University of Illinois, Pennsylvania State" }
+      { name: "R", source: "UIUC, PSU" }
     ]
   },
   "Tech & Productivity": {
@@ -547,7 +547,7 @@ const skillsData = {
       { name: "Microsoft Power Automate", source: "NCSOFT" },
       { name: "SharePoint", source: "NCSOFT" },
       { name: "Jira", source: "NCSOFT, Nexon" },
-      { name: "VBA", source: "University of Illinois" },
+      { name: "VBA", source: "UIUC" },
       { name: "Python", source: "NCS 560시간" },
       { name: "Figma", source: "실무 경험" }
     ]
@@ -568,7 +568,7 @@ const skillsData = {
       { name: "Service Launches", source: "SINoALICE, PURPLE, L2M" },
       { name: "Product Compliance", source: "PURPLE 글로벌" },
       { name: "Systems Thinking", source: "실무 경험" },
-      { name: "Optimization", source: "University of Illinois" },
+      { name: "Optimization", source: "UIUC" },
       { name: "Flow Charts", source: "NCSOFT" }
     ]
   },
